@@ -1,5 +1,7 @@
 package web.config;
 
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
@@ -24,12 +26,11 @@ import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 import javax.sql.DataSource;
 import java.util.Properties;
 
-
 @Configuration
 @ComponentScan("web")
 @PropertySource("classpath:hibernate.properties")
 @EnableTransactionManagement
-@EnableJpaRepositories("web")
+@EnableJpaRepositories("web.repositories")
 @EnableWebMvc
 public class SpringConfig implements WebMvcConfigurer {
 
